@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 import json_repair
 
 from gpt_researcher.llm_provider.generic.base import ReasoningEfforts
