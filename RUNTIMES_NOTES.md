@@ -138,3 +138,10 @@ which defers annotation evaluation without reordering anything.
 - Do not point `OPENAI_BASE_URL` at the runtime server while also relying on
   real OpenAI models or embeddings in the same process; the base URL is
   global to the `openai` provider.
+
+## Test run (2026-08-12, overnight)
+
+- Command: `python cli.py "How reliable is LLM-as-a-judge evaluation, and what are the main approaches to quantifying and improving its uncertainty and calibration (2024-2026)?" --report_type research_report`
+- Backends: SMART/STRATEGIC=claudecli-sonnet, FAST=claudecli-haiku, embeddings=local MiniLM, retriever=duckduckgo+arxiv. No API keys.
+- Simulated human input: the research question above (chosen to match the maintainer's research area).
+- Output: `runs/2026-08-12-llm-judge-calibration/` (34 sources, ~21k chars, PDF included). Wall time ~13 min.
