@@ -145,3 +145,12 @@ which defers annotation evaluation without reordering anything.
 - Backends: SMART/STRATEGIC=claudecli-sonnet, FAST=claudecli-haiku, embeddings=local MiniLM, retriever=duckduckgo+arxiv. No API keys.
 - Simulated human input: the research question above (chosen to match the maintainer's research area).
 - Output: `runs/2026-08-12-llm-judge-calibration/` (34 sources, ~21k chars, PDF included). Wall time ~13 min.
+
+## Local-model test run (2026-08-13)
+
+- Same pipeline, but all three LLM roles set to `openai:local-qwen`
+  (Qwen3-8B-AWQ on one 11GB GPU via the standalone runtime server). No API
+  keys or Claude subscription used.
+- Question (simulated human input): practical LoRA fine-tuning of small
+  language models on a single consumer GPU.
+- Output: `runs/2026-08-13-lora-finetuning-localqwen/` (31 sources).
